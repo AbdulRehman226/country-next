@@ -1,5 +1,5 @@
-import { getDisplayName } from "next/dist/shared/lib/utils";
-import Image from "next/image";
+// import { getDisplayName } from "next/dist/shared/lib/utils";
+// import Image from "next/image";
 import Link from "next/link";
 export default function Home (){
     return (

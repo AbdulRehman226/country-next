@@ -1,7 +1,8 @@
-import { pages } from "next/dist/build/templates/app-page";
+
+// import { AnyARecord } from "dns";
 import Link from "next/link";
 
-export default function CountryName ({params}:any){
+export default function CountryName ( {params}:{params:{ country_name: string}} ){
     const countries :{
        name:string,
        capital:string,
@@ -31,7 +32,7 @@ export default function CountryName ({params}:any){
     function findCountry(country_url:string){
      return countries.find(country => country.name.toLocaleLowerCase() == country_url.toLocaleLowerCase())
     }
-   let result = findCountry(params.country_name);
+   const result = findCountry(params.country_name);
     
     return (
         <div>
